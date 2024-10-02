@@ -1,0 +1,30 @@
+# Módulos de Node
+node_modules/  
+
+# Archivos de logs
+logs            
+*.log           
+
+# Variables de entorno
+.env            
+
+# Salida de compilación
+dist/           
+build/          
+
+# Archivos temporales
+tmp/            
+temp/           
+
+# Archivos de IDE
+.vscode/        
+.idea/          
+*.sublime-project 
+*.sublime-workspace 
+
+# Archivos específicos del sistema operativo
+.DS_Store       
+Thumbs.db       
+
+# Directorio de cobertura
+coverage/       

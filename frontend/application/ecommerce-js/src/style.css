@@ -1,0 +1,116 @@
+/* Establece que el modelo de caja utiliza el tamaño del borde y el relleno para calcular el ancho y la altura de los elementos */
+* {
+    box-sizing: border-box;   
+}
+
+/* 
+Establece el tamaño de fuente base para el documento.
+Al usar 62.5%, el tamaño de fuente predeterminado de 16px se convierte en:
+16px * 0.625 = 10px
+Esto hace que 1rem sea igual a 10px, facilitando la conversión entre rem y px.
+*/
+html {
+    font-size: 62.5%; /* por defecto los navegadores tienen 16px, 16px * 62.5 = 10px */
+}
+
+/* 
+Configura el estilo general del cuerpo del documento.
+- Se establece una altura del 100% de la ventana del navegador (100vh).
+- El tamaño de fuente se establece en 1.6rem, lo que equivale a 1.6 * 10px = 16px.
+- Se eliminan los márgenes predeterminados del navegador para el cuerpo.
+*/
+body {
+    height: 100vh;                  /* Altura del cuerpo es igual a la altura de la ventana del navegador */
+    font: 1.6rem Helvetica, Arial;  /* Tamaño de fuente de 1.6rem = 16px, usando fuentes Helvetica y Arial */
+    margin: 0;                      /* Elimina los márgenes predeterminados del navegador */
+}
+
+a{
+    color:#000000;
+    text-decoration: none;
+}
+a:hover{
+    color:#f08040;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer';
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+    height: 100%;
+}
+header{
+    grid-area: header;
+    background-color: #203040;
+    color:#ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+header a{
+    color:#ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header a:hover{
+    color:#f08040;
+}
+.brand a{
+    font-size: 3rem;
+}
+footer{
+    background-color: #203040;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#ffffff;
+}
+
+/*Products*/
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.products li{
+    flex:0 1 30rem;
+    margin:1rem;
+    margin-bottom: 0;
+    height: 42rem;
+    border-top: 0.2 rem #e0e0e0 solid;
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+.product img{
+    max-height: 26rem;
+    max-width: 26rem;
+    margin-top: 2rem;
+}
+
+.product-name{
+    line-height: 2.2rem;
+
+}
+.product-brand{
+    font-size: 1.2rem;
+    color:#808080;
+}
+.product-price{
+    font-size: 2rem;
+}

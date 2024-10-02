@@ -1,0 +1,15 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "Este proyecto está desarrollado utilizando JavaScript puro. Contiene el código fuente, componentes y lógica necesaria para la funcionalidad del frontend del eCommerce.",
+  "main": "index.js",
+  "scripts": {
+    "start":"live-server src --verbose",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
